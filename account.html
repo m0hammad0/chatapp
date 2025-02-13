@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account</title>
+    <style>
+        @font-face {
+            font-family: font1;
+            src: url("font1.woff2") format("woff2");
+        }
+        body {
+            background: #252525;
+            margin: 0;
+            min-height: 100vh;
+        }
+        .profile {
+            background: #333333;
+            margin: 8px;
+            display: flex;
+            height: 80px;
+            direction: rtl;
+            align-items: center;
+            border-radius: 15px;
+        }
+        .profile-img1 {
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            margin: 0 8px;
+        }
+        .profile-span1 {
+            font-family: system-ui;
+            color: #c5c5c5;
+        }
+        .setting {
+            background: #333333;
+            margin: 0 8px;
+            display: flex;
+            height: 50px;
+            direction: rtl;
+            align-items: center;
+            border-radius: 15px;
+        }
+        .setting-div1 {
+            width: 50%;
+            padding: 0 8px;
+            color: #c5c5c5;
+            font-family: system-ui;
+            display: flex;
+            justify-content: start;
+        }
+        .setting-div2 {
+            width: 50%;
+            direction: ltr;
+            padding: 0 10px;
+            color: #c5c5c5;
+            font-family: cursive;
+            font-size: 20px;
+            display: flex;
+            justify-content: start;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img class="profile-img1" src="img2.png">
+        <span class="profile-span1">user298</span>
+    </div>
+    <div  class="setting">
+        <button style="border: none;
+        width: 100%;
+        background: #333333;
+        display: flex;
+        height: 50px;
+        direction: rtl;
+        align-items: center;
+        border-radius: 15px;" onclick="setting()">
+            <div class="setting-div1">تنظیمات</div>
+            <div class="setting-div2"><</div>
+        </button>
+    </div>
+    <script>
+        function setting() {
+            alert("در حال حاضر تنظیمات فعال نیست .")
+        }
+    </script>
+</body>
+</html>

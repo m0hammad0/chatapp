@@ -14,7 +14,7 @@
             margin: 0;
             min-height: 100vh;
         }
-        .group {
+        .group, .account {
             height: 100%;
             width: 100%;
             border: none;
@@ -53,16 +53,39 @@
             border: none;
             background: #252525;
         }
+        .account {
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <div style="height: 675px; width: 100%;">
-        <iframe class="group" src="https://m0hammad0.github.io/chatapp/group"></iframe>
+    <div style="height: 690px; width: 100%;">
+        <iframe class="group" id="group" src="https://m0hammad0.github.io/chatapp/group.html"></iframe>
+        <iframe class="account" id="account" src="https://m0hammad0.github.io/chatapp/account.html"></iframe>
     </div>
     <div class="bottom-menu">
-        <button class="bottom-menu-button1">گفتگو ها</button>
+        <button class="bottom-menu-button1" id="chatsButton" onclick="chatsClick()">گفتگو ها</button>
         <div class="bottom-menu-div1"></div>
-        <button class="bottom-menu-button2">حساب کاربری</button>
+        <button class="bottom-menu-button2" id="accountButton" onclick="accountClick()">حساب کاربری</button>
     </div>
+    <script>
+        var group = document.getElementById("group")
+        var account = document.getElementById("account")
+        var chatsButton = document.getElementById("chatsButton");
+        var accountButton = document.getElementById("accountButton");
+
+        function chatsClick() {
+            chatsButton.style.color = "#0076bd";
+            accountButton.style.color = "#8b8b8b";
+            group.style.display = "block";
+            account.style.display = "none";
+        }
+        function accountClick() {
+            chatsButton.style.color = "#8b8b8b";
+            accountButton.style.color = "#0076bd";
+            group.style.display = "none";
+            account.style.display = "block";
+        }
+    </script>
 </body>
 </html>
